@@ -50,3 +50,8 @@ On PC ( local version )
         username : ****
 	passwd   : ****
 
+
+===================
+$ git add <some_modified_file>
+$ git commit -m "mnemonic for modification done"
+$ git push -u origin master
