@@ -23,6 +23,33 @@ defmodule RoombaTest do
   end
 
 
+  test "try to open a serial port" do
+   {:ok,pid  } = Roomba.SerComm.start()
+   Roomba.SerComm.open(pid,"ttyUSB0",115200)
+   Circuits.UART.close(pid)
+   Circuits.UART.stop(pid)
+  end
+
+
+
+  test "try to write  serial port (TX/RX in C/C)" do
+   {:ok,pid  } = Roomba.SerComm.start()
+   Roomba.SerComm.open(pid,"ttyUSB0",115200)
+
+   Roomba.SerComm.write(pid,"0123456789abcdefghilmnopqrstuvzABCDEFGHILMNOPQRSTUVZ")
+
+   assert  Roomba.SerComm.read(pid) == {:ok,"0123456789abcdefghilmnopqrstuvzABCDEFGHILMNOPQRSTUVZ"   }
+
+   Circuits.UART.close(pid)
+   Circuits.UART.stop(pid)
+  end
+
+
+
+
+
+
+
 
 
 end
