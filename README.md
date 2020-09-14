@@ -52,6 +52,6 @@ On PC ( local version )
 
 
 ===================
-$ git add <some_modified_file>
-$ git commit -m "mnemonic for modification done"
-$ git push -u origin master
+(-) $ git add <some_modified_file>
+(-) $ git commit -m "mnemonic for modification done"
+8-) $ git push -u origin master
