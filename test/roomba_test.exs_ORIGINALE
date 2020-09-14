@@ -1,0 +1,8 @@
+defmodule RoombaTest do
+  use ExUnit.Case
+  doctest Roomba
+
+  test "greets the world" do
+    assert Roomba.hello() == :world
+  end
+end

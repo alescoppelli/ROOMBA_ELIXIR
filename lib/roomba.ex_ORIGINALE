@@ -1,0 +1,18 @@
+defmodule Roomba do
+  @moduledoc """
+  Documentation for `Roomba`.
+  """
+
+  @doc """
+  Hello world.
+
+  ## Examples
+
+      iex> Roomba.hello()
+      :world
+
+  """
+  def hello do
+    :world
+  end
+end
